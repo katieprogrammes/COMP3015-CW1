@@ -16,12 +16,12 @@ Fog can be toggled on/off using the F key, and camera rotation can be toggled on
 When the program starts, the camera loads into a fog‑covered plain. Ahead, five zombies stand partially obscured by distance fog. As the camera rotates, the player sees that their escape route is blocked by another figure, reinforcing the eerie tone of the scene.
 
 The scene is rendered using two shader programs:
-- "basic_uniform" - used for all 3D models
-- "skybox" - used for the skybox
+- basic_uniform - used for all 3D models
+- skybox - used for the skybox
 
 The Key Features are:
 
-- Blinn–Phong lighting with ambient, diffuse, and specular components
+- Blinn–Phong lighting with ambient, diffuse, and specular components. Blinn–Phong was chosen because it provides clear specular highlights and works well with textured models in a foggy environment.
 - Rim lighting to emphasise silhouettes and enhance the moody atmosphere
 - Distance fog, blending object colour with a fog colour based on camera distance
 - Cube‑mapped skybox surrounding the scene
@@ -29,6 +29,7 @@ The Key Features are:
 - Fog toggle, allowing the user to compare fogged vs. unfogged rendering
 
 The Controls are:
+
 - Space bar: Toggles automatic camera rotation
 - F key: Toggles fog on and off
 - ESC: Exits the program
