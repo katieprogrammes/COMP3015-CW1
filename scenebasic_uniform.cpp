@@ -20,7 +20,7 @@ using glm::vec4;
 using glm::mat3;
 using glm::mat4;
 
-SceneBasic_Uniform::SceneBasic_Uniform() : tPrev(0), angle(90.0f), rotSpeed(glm::pi<float>()/16.0f), sky(100.0f), plane(50.0f, 50.0f, 1, 1)
+SceneBasic_Uniform::SceneBasic_Uniform() : tPrev(0), angle(90.0f), rotSpeed(glm::pi<float>()/16.0f), sky(100.0f)
 {
     zombie = ObjMesh::load("media/zombie/Zumbi_Female.obj", true, true);
     mimi = ObjMesh::load("media/Mimikyu.obj", true, true);
