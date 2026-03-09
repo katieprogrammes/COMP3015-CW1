@@ -25,6 +25,14 @@ Fog blends object colour with a fog colour based on distance from the camera. Th
 ##Code Structure
 
 scenebasic_uniform.cpp is where the main scene logic is and includes rendering of the objects and textures, camera movement, fog toggle, and model transforms.
+
 basic_uniform.vert / basic_uniform.frag are the vertex and fragment shaders for all 3D models. They also contains Blinn–Phong shading, rim lighting, and fog for the models.
+
 skybox.vert / skybox.frag are the vertex and fragment shaders for the cube mapped skybox and also contain the general scene fog.
+
 All other .cpp and .h files are helper files, with the only changes being made in scene.h and scenerunner.h for the logic on key presses.
+
+
+##AI Usage
+This was the Assisted Work Sections that my AI usage fell under:
+A8 - I was having problems understanding an error with a variable not being recognised. It helped me understand why I was getting the error and where I needed to move the variable to. The prompt and response can be seen here: https://copilot.microsoft.com/shares/WLerBNcmcbx7syVhCBB8f
