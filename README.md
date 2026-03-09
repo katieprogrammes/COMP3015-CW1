@@ -62,3 +62,10 @@ This was the Assisted Work Sections that my AI usage fell under:
 
 A8 - I was having problems understanding an error with a variable not being recognised. It helped me understand why I was getting the error and where I needed to move the variable to. 
 The prompt and response can be seen here: https://copilot.microsoft.com/shares/WLerBNcmcbx7syVhCBB8f
+
+## How to Run the Protoype
+The Release folder contains a standalone .exe that runs without Visual Studio.
+All required assets (models, textures, shaders) are included in the project folder.
+Simply run the executable to start the prototype.
+
+## Youtube Link
