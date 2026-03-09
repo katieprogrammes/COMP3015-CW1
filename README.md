@@ -36,4 +36,6 @@ All other .cpp and .h files are helper files, with the only changes being made i
 ## AI Usage
 
 This was the Assisted Work Sections that my AI usage fell under:
-A8 - I was having problems understanding an error with a variable not being recognised. It helped me understand why I was getting the error and where I needed to move the variable to. The prompt and response can be seen here: https://copilot.microsoft.com/shares/WLerBNcmcbx7syVhCBB8f
+
+A8 - I was having problems understanding an error with a variable not being recognised. It helped me understand why I was getting the error and where I needed to move the variable to. 
+The prompt and response can be seen here: https://copilot.microsoft.com/shares/WLerBNcmcbx7syVhCBB8f
