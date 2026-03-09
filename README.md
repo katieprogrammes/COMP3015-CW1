@@ -70,3 +70,5 @@ All required assets (models, textures, shaders) are included in the project fold
 Simply run the executable to start the prototype.
 
 ## Youtube Link
+
+https://youtu.be/S_VnKrvuzCI
