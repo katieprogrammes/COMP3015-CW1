@@ -9,7 +9,7 @@ The project was developed and tested entirely on this configuration.
 
 ## How the Prototype Works
 
-This prototype demonstrates a custom Blinn–Phong shading model implemented in GLSL, applied to two textured 3D models inside a fog‑based environment.
+This prototype demonstrates a custom Blinn-Phong shading model implemented in GLSL, applied to two textured 3D models inside a fog‑based environment.
 The scene includes a cube‑mapped skybox, distance fog, rim lighting, and a rotating camera.
 Fog can be toggled on/off using the F key, and camera rotation can be toggled on/off with the space bar.
 
@@ -21,7 +21,7 @@ The scene is rendered using two shader programs:
 
 The Key Features are:
 
-- Blinn–Phong lighting with ambient, diffuse, and specular components. Blinn–Phong was chosen because it provides clear specular highlights and works well with textured models in a foggy environment.
+- Blinn-Phong lighting with ambient, diffuse, and specular components. Blinn–Phong was chosen because it provides clear specular highlights and works well with textured models in a foggy environment
 - Rim lighting to emphasise silhouettes and enhance the moody atmosphere
 - Distance fog, blending object colour with a fog colour based on camera distance
 - Cube‑mapped skybox surrounding the scene
@@ -30,7 +30,7 @@ The Key Features are:
 
 The Controls are:
 
-- Space bar: Toggles automatic camera rotation
+- Space bar: Toggles camera rotation on and off
 - F key: Toggles fog on and off
 - ESC: Exits the program
 
@@ -48,7 +48,7 @@ This is the core of the project. It handles:
 
 basic_uniform.vert / basic_uniform.frag
 These are the vertex and fragment shaders for all 3D models and contain:
-- Blinn–Phong shading
+- Blinn-Phong shading
 - Rim lighting
 - Fog for the models
 
