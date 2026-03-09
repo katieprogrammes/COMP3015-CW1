@@ -5,7 +5,7 @@
 - Operating System: Windows 64-bit
 - OpenGL Version 4.6
 
-  ## How the Prototype Works
+## How the Prototype Works
 
 This prototype demonstrates a custom Blinn–Phong shading model implemented in GLSL, applied to two textured 3D models inside a fog‑based environment.
 The scene includes a cube‑mapped skybox, distance fog, rim lighting, and a rotating camera.
@@ -22,7 +22,7 @@ Rim lighting is added to emphasise silhouettes and further emphasise the moody a
 
 Fog blends object colour with a fog colour based on distance from the camera. The fog can be toggled on/off using the F key.
 
-##Code Structure
+## Code Structure
 
 scenebasic_uniform.cpp is where the main scene logic is and includes rendering of the objects and textures, camera movement, fog toggle, and model transforms.
 
@@ -33,6 +33,7 @@ skybox.vert / skybox.frag are the vertex and fragment shaders for the cube mappe
 All other .cpp and .h files are helper files, with the only changes being made in scene.h and scenerunner.h for the logic on key presses.
 
 
-##AI Usage
+## AI Usage
+
 This was the Assisted Work Sections that my AI usage fell under:
 A8 - I was having problems understanding an error with a variable not being recognised. It helped me understand why I was getting the error and where I needed to move the variable to. The prompt and response can be seen here: https://copilot.microsoft.com/shares/WLerBNcmcbx7syVhCBB8f
