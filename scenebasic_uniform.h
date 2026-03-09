@@ -20,19 +20,28 @@ class SceneBasic_Uniform : public Scene
 {
 private:
     //Torus torus;
-    //Plane plane;
+    Plane plane;
     //Teapot teapot;
     //Cube cube;
     SkyBox sky;
     float rotSpeed;
-    //std::unique_ptr<ObjMesh> ogre; //ogre mesh
+    std::unique_ptr<ObjMesh> zombie; //zombie mesh
+    std::unique_ptr<ObjMesh> mimi; //mimikyu mesh
     float tPrev;
     float angle;
+    GLSLProgram skyboxprog;
     GLSLProgram prog;
     glm::mat4 rotationMatrix;
 
+    GLuint zombieTex;
+    GLuint mimiTex;
+
     void compile();
+    void setSkyboxMatrices();
     void setMatrices();
+
+
+
 
 public:
     SceneBasic_Uniform();

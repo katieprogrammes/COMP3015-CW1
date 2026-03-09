@@ -42,6 +42,7 @@ public:
     
     void animate( bool value ) { m_animate = value; }
     bool animating() { return m_animate; }
+    bool cameraRotate = true;
     
 protected:
 	bool m_animate;

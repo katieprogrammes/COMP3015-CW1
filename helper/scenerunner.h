@@ -127,7 +127,7 @@ private:
             glfwPollEvents();
 			int state = glfwGetKey(window, GLFW_KEY_SPACE);
 			if (state == GLFW_PRESS)
-				scene.animate(!scene.animating());
+                scene.cameraRotate = !scene.cameraRotate;
         }
     }
 };
