@@ -48,6 +48,9 @@ void main() {
     vec2 uv = clamp(TexCoord, 0.001, 0.999);
     vec3 texColor = texture(DiffuseTex, uv).rgb;
     vec3 shadeColor = texColor * blinnPhong(Position, normalize(Normal));
+    float rim = 1.0 - max(dot(normalize(Normal), normalize(-Position)), 0.0);
+    vec3 rimColor = vec3(1.0) * pow(rim, 3.0);
+    shadeColor += rimColor * 0.25;     
     vec3 color=mix(Fog.Color,shadeColor,fogFactor);
     FragColor = vec4(color, 1.0);
 }

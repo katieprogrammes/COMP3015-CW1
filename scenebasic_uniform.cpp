@@ -54,7 +54,7 @@ void SceneBasic_Uniform::initScene()
     prog.setUniform("DiffuseTex", 1);
 
 
-
+    //world fog
     skyboxprog.use();
     skyboxprog.setUniform("Fog.MaxDist", 120.0f);
     skyboxprog.setUniform("Fog.MinDist", 10.0f);
@@ -97,11 +97,15 @@ void SceneBasic_Uniform::render()
 
     vec3 cameraPos = vec3(7.0f*cos(angle), 2.0f, 7.0f*sin(angle));
     view = glm::lookAt(cameraPos, vec3(-3.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
+
+    //skybox
     skyboxprog.use();
+    skyboxprog.setUniform("FogEnabled", fogEnabled);
     model = mat4(1.0f);
     setSkyboxMatrices();
     sky.render();
 
+    //zombies
     prog.use();
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, zombieTex);
@@ -138,10 +142,9 @@ void SceneBasic_Uniform::render()
 
     prog.setUniform("DiffuseTex", 1);
 
-    
     model = mat4(1.0f);
-    model = glm::translate(model, vec3(20.0f, 0.0f, 7.0f));
-    model = glm::rotate(model, glm::radians(180.0f), vec3(0.0f, 1.0f, 0.0f));
+    model = glm::translate(model, vec3(4.0f, 0.0f, 14.0f));
+    model = glm::rotate(model, glm::radians(110.0f), vec3(0.0f, 1.0f, 0.0f));
     model = glm::scale(model, vec3(15.0f));
     setMatrices();
     mimi->render();

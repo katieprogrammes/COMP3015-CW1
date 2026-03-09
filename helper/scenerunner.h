@@ -117,17 +117,43 @@ private:
     }
 
     void mainLoop(GLFWwindow * window, Scene & scene) {
-        while( ! glfwWindowShouldClose(window) && !glfwGetKey(window, GLFW_KEY_ESCAPE) ) {
-            GLUtils::checkForOpenGLError(__FILE__,__LINE__);
-			
+        while (!glfwWindowShouldClose(window) && !glfwGetKey(window, GLFW_KEY_ESCAPE)) {
+            GLUtils::checkForOpenGLError(__FILE__, __LINE__);
+
             scene.update(float(glfwGetTime()));
             scene.render();
             glfwSwapBuffers(window);
 
+            
             glfwPollEvents();
-			int state = glfwGetKey(window, GLFW_KEY_SPACE);
-			if (state == GLFW_PRESS)
+
+            //camera command
+            static bool spaceWasPressed = false;
+            int spaceState = glfwGetKey(window, GLFW_KEY_SPACE);
+
+            if (spaceState == GLFW_PRESS && !spaceWasPressed) {
                 scene.cameraRotate = !scene.cameraRotate;
+                spaceWasPressed = true;
+            }
+
+            if (spaceState == GLFW_RELEASE) {
+                spaceWasPressed = false;
+            }
+
+
+            //fog command
+            static bool fWasPressed = false;
+            int fogState = glfwGetKey(window, GLFW_KEY_F);
+
+            if (fogState == GLFW_PRESS && !fWasPressed) {
+                scene.fogEnabled = !scene.fogEnabled;
+                fWasPressed = true;
+            }
+
+            if (fogState == GLFW_RELEASE) {
+                fWasPressed = false;
+            }
+
         }
     }
 };

@@ -4,6 +4,8 @@ layout (binding = 0) uniform samplerCube SkyBoxTex;
 in vec3 Vec;
 layout (location = 0) out vec4 FragColor;
 
+uniform bool FogEnabled;
+
 uniform struct FogInfo{
     float MaxDist;
     float MinDist;
@@ -17,7 +19,7 @@ void main() {
     float dist = length(Vec);
     float fogFactor = (Fog.MaxDist - dist) / (Fog.MaxDist - Fog.MinDist);
     fogFactor = clamp(fogFactor, 0.0, 1.0);
-    vec3 color = mix(Fog.Color, texColor, fogFactor);
+    vec3 color = FogEnabled ? mix(Fog.Color, texColor, fogFactor) : texColor;
 
     FragColor = vec4(color, 1.0);
 }
