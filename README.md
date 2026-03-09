@@ -5,28 +5,51 @@
 - Operating System: Windows 64-bit
 - OpenGL Version 4.6
 
+The project was developed and tested entirely on this configuration.
+
 ## How the Prototype Works
 
 This prototype demonstrates a custom Blinn–Phong shading model implemented in GLSL, applied to two textured 3D models inside a fog‑based environment.
 The scene includes a cube‑mapped skybox, distance fog, rim lighting, and a rotating camera.
 Fog can be toggled on/off using the F key, and camera rotation can be toggled on/off with the space bar.
 
-The camera loads in to a foggy plain, only to see 5 zombies up ahead. When the camera turns to show your possible escape route, something is blocking the way!
+When the program starts, the camera loads into a fog‑covered plain. Ahead, five zombies stand partially obscured by distance fog. As the camera rotates, the player sees that their escape route is blocked by another figure, reinforcing the eerie tone of the scene.
 
 The scene is rendered using two shader programs:
 - "basic_uniform" - used for all 3D models
 - "skybox" - used for the skybox
-  
-Lighting is implemented using a single Blinn–Phong light with ambient, diffuse, and specular components. 
-Rim lighting is added to emphasise silhouettes and further emphasise the moody atmosphere.
 
-Fog blends object colour with a fog colour based on distance from the camera. The fog can be toggled on/off using the F key.
+The Key Features are:
+
+- Blinn–Phong lighting with ambient, diffuse, and specular components
+- Rim lighting to emphasise silhouettes and enhance the moody atmosphere
+- Distance fog, blending object colour with a fog colour based on camera distance
+- Cube‑mapped skybox surrounding the scene
+- Camera rotation, which can be toggled on/off
+- Fog toggle, allowing the user to compare fogged vs. unfogged rendering
+
+The Controls are:
+- Space bar: Toggles automatic camera rotation
+- F key: Toggles fog on and off
+- ESC: Exits the program
 
 ## Code Structure
 
-scenebasic_uniform.cpp is where the main scene logic is and includes rendering of the objects and textures, camera movement, fog toggle, and model transforms.
+scenebasic_uniform.cpp  
+This is the core of the project. It handles:
+- Loading and drawing the models
+- Applying textures
+- Updating the camera
+- Fog toggling
+- Model transformations
+- Lighting setup
+- Passing uniforms to shaders
 
-basic_uniform.vert / basic_uniform.frag are the vertex and fragment shaders for all 3D models. They also contains Blinn–Phong shading, rim lighting, and fog for the models.
+basic_uniform.vert / basic_uniform.frag
+These are the vertex and fragment shaders for all 3D models and contain:
+- Blinn–Phong shading
+- Rim lighting
+- Fog for the models
 
 skybox.vert / skybox.frag are the vertex and fragment shaders for the cube mapped skybox and also contain the general scene fog.
 
