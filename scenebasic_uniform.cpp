@@ -23,7 +23,7 @@ using glm::mat4;
 SceneBasic_Uniform::SceneBasic_Uniform() : tPrev(0), angle(90.0f), rotSpeed(glm::pi<float>()/16.0f), sky(100.0f)
 {
     zombie = ObjMesh::load("media/zombie/Zumbi_Female.obj", true, true);
-    mimi = ObjMesh::load("media/Mimikyu.obj", true, true);
+    mimi = ObjMesh::load("media/mimi/Mimikyu.obj", true, true);
 }
 
 void SceneBasic_Uniform::initScene()
@@ -46,11 +46,11 @@ void SceneBasic_Uniform::initScene()
     prog.setUniform("Fog.Color", vec3(0.5f, 0.5f, 0.5f));
 
     //zombie texture
-    zombieTex = Texture::loadTexture("media/zombie/pele.png");
+    zombieTex = Texture::loadTexture("media/texture/pele.png");
     prog.setUniform("DiffuseTex", 1);
 
     //mimikyu texture
-    mimiTex = Texture::loadTexture("media/Mimigma.png");
+    mimiTex = Texture::loadTexture("media/texture/Mimigma.png");
     prog.setUniform("DiffuseTex", 1);
 
 
